@@ -53,6 +53,7 @@ public protocol HeroTransitionDelegate: AnyObject {
 open class HeroTransition: NSObject {
   public weak var delegate: HeroTransitionDelegate?
 
+  public var preffersDefaultAnimation: Bool = true
   public var defaultAnimation: HeroDefaultAnimationType = .auto
   public var containerColor: UIColor = .black
   public var isUserInteractionEnabled = false
