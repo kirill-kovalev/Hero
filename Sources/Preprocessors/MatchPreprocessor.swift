@@ -26,6 +26,7 @@ import UIKit
 
 class MatchPreprocessor: BasePreprocessor {
   override func process(fromViews: [UIView], toViews: [UIView]) {
+    guard !Hero.shared.preffersDefaultAnimation else { return }
     for tv in toViews {
       guard let id = tv.hero.id, let fv = context.sourceView(for: id) else { continue }
 
